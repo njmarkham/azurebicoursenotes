@@ -1,6 +1,7 @@
 # azurebicoursenotes
 Course notes from Big Data Engineering with Azure
-What is Azure Log Analytics?
+
+<h2>What is Azure Log Analytics?</h2>
  
 
 What is a Service Bus?
