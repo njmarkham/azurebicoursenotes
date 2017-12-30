@@ -25,7 +25,7 @@ Course notes from Big Data Engineering with Azure
 <li>Velocity - The frequency/speed of the data to be ingested and processed</li>
 </ul>
 
-<p><h4>Architectures for processing Big Data</h4></p>
+<p><h4>Architectures for Processing Big Data</h4></p>
 
 <p>Lambda</p>
 
