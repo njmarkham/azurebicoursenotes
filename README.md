@@ -3,12 +3,15 @@ Course notes from Big Data Engineering with Azure
 
 <h1>Contents</h1>
 
-<a href="https://github.com/njmarkham/azurebicoursenotes/">Overview (this page)</a><br/>
-<a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">FAQ</a><br/>
+<ul>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/">Overview (this page)</a><b/></li>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">FAQ</a><b/></li>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">Module 2 and 3 Stream Analytics</a><b/></li>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">Module 4 - Azure Data Lake Store</a><b/></li>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">Module 5 and 6 - Data Lake Analytics / Implementing Custom Operations and Monitoring Performance</a><b/></li>
+</ul>
 
-Module 2 and 3 Stream Analytics<br/>
-Module 4 - Azure Data Lake Store<br/>
-Module 5 and 6 - Data Lake Analytics / Implementing Custom Operations and Monitoring Performance<br/>
+<br/>
 
 <hr/>
 
