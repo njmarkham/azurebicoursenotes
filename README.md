@@ -1,16 +1,18 @@
 # azurebicoursenotes
 Course notes from Big Data Engineering with Azure
 
-<h2>What is Azure Log Analytics?</h2>
- 
+<h1>Contents</h1>
 
-What is a Service Bus?
- 
+<a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">FAQ</a><br/>
 
-What  are Vertices?
-A vertex represents the resources used to perform ad given task. Each vertex runs using an Analytics Unit (AU), each AU provides the processing power of two CPU cores and 6GB RAM. A vertex is also allotted a maximum of five hours run-time before it's forcible terminated to avoid runaway costs.
+Module 2 and 3 Stream Analytics<br/>
+Module 4 - Azure Data Lake Store<br/>
+Module 5 and 6 - Data Lake Analytics / Implementing Custom Operations and Monitoring Performance<br/>
 
- 
+<hr/>
+
+<h2>General Overview of Big Data Engineering with Azure</h2>
+
 
 Three V's of Big Data
 
