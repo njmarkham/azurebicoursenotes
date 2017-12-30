@@ -16,9 +16,9 @@ Module 5 and 6 - Data Lake Analytics / Implementing Custom Operations and Monito
 
 <p><h4>Three V's of Big Data</h4></p>
 <ul>
-<li>Volume</li>
-<li>Variety</li>
-<li>Velocity</li>
+<li>Volume - How much data is being ingested</li>
+<li>Variety - The type of data being ingested</li>
+<li>Velocity - The frequency/speed of the data to be ingested and processed</li>
 </ul>
 
 <p><h4>Architectures for processing Big Data</h4></p>
