@@ -20,7 +20,7 @@
 
 <hr/>
 
-<h3>FAQ</h3>
+<h3><strong>FAQ</strong></h3>
 
 <h2>What is Azure Log Analytics?</h2>
  

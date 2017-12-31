@@ -21,7 +21,7 @@
 
 <hr/>
 
-<h3>General Overview of Big Data Engineering with Azure</h3>
+<h3><strong>General Overview of Big Data Engineering with Azure</strong></h3>
 
 
 <p><h4>Three V's of Big Data</h4></p>
