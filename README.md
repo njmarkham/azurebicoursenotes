@@ -2,7 +2,7 @@
 <h1>20776A: Performing Big Data Engineering on Microsoft Cloud Services</h1>
 <i>Course notes from Big Data Engineering with Azure</i>
 
-<h1>Contents</h1>
+<h2>Contents</h2>
 
 <ul>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/">Overview</a></b></li>
@@ -21,7 +21,7 @@
 
 <hr/>
 
-<h2>General Overview of Big Data Engineering with Azure</h2>
+<h3>General Overview of Big Data Engineering with Azure</h3>
 
 
 <p><h4>Three V's of Big Data</h4></p>
