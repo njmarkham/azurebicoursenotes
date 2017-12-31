@@ -6,7 +6,7 @@ Course notes from Big Data Engineering with Azure
 <ul>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/">Overview</a></b></li>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/faq.md">FAQ</a></b></li>
-<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/mod3.md">Module 2 - Processing Event Streams using Azure Stream Analytics</a></b></li>
+<li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/mod2.md">Module 2 - Processing Event Streams using Azure Stream Analytics</a></b></li>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/mod3.md">Module 3 - Performing Custom Processing in Azure Stream Analytics</a></b></li>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/mod4.md">Module 4 - Managing Big Data in Azure Data Lake Store</a></b></li>
 <li><b><a href="https://github.com/njmarkham/azurebicoursenotes/blob/master/mod5.md">Module 5 - Processing Big Data using Azure Data Lake Analytics</a></b></li>
@@ -55,3 +55,13 @@ Course notes from Big Data Engineering with Azure
 </ul>
 
 <p><i>Note: Data lake provides storage for very large amounts of unstructured data which typically ties in the the above architectures. SQL Data Warehouse supports structure and processed data in a pre-configured schema. SQL Data warehouse may contain the output from the above architectures, if required.</i></p>
+
+<p><b>Security</b></p>
+
+<p><strong>Azure ExpressRoute</strong> for private network connectivity to cloud datacenters.&nbsp;</p>
+
+<p><strong>Azure Virtual Networks</strong> - access to Azure cloud in which only your subscription has access, full control over DNS and security policies etc.</p>
+
+<p><strong>Network Security Groups</strong> - create rules at various levels Access Control Lists (ACL&#39;s)</p>
+
+<p><strong>Azure Perimeter Networks </strong>- in bound packets must travel through firewalls and intrusion detection systems.</p>
