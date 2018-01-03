@@ -26,6 +26,11 @@
  
 
 <p><h2>What is a Service Bus?</h2></p>
+
+<p><h2>What's the difference between a clustered and non-clustered index on a table?</h2>
+A clustered index dictates teh way rows are sorted, which can provide very godo performance when reading from a table. However insertion of data can be slow as the index has to be rearranged frequently, only one clustered index can exist on a single table.<br/>
+By contrast, a non-clustered index does not alter the way in which the rows are stored, seperate objects are created for the table as the data changes over the time which act as pointers for back to the rows being queried. Many non-clustered indexes can exist on a table. These indexes are good for  joins columns or queries that target a column.
+</p>
  
 
 <p><h2>What are Vertices?</h2>
@@ -51,7 +56,10 @@ Neither of these are the same as a partition, replicated or temporary tables.
 
 <p><h2>What is a heap table?</h2>
 <br/>
-When you are temporarily landing data on SQL Data Warehouse, you may find that using a heap table will make the overall process faster. This is because loads to heaps are faster than to index tables and in some cases the subsequent read can be done from cache. If you are loading data only to stage it before running more transformations, loading the table to heap table will be much faster than loading the data to a clustered columnstore table. In addition, loading data to a temporary table will also load much faster than loading a table to permanent storage.
+Reletes to the table structure. When you are temporarily landing data on SQL Data Warehouse, you may find that using a heap table will make the overall process faster. This is because loads to heaps are faster than to index tables and in some cases the subsequent read can be done from cache. If you are loading data only to stage it before running more transformations, loading the table to heap table will be much faster than loading the data to a clustered columnstore table. In addition, loading data to a temporary table will also load much faster than loading a table to permanent storage.
 <br/><br/>
 For small lookup tables, less than 100 million rows, often heap tables make sense. Cluster columnstore tables begin to achieve optimal compression once there is more than 100 million rows.
 </h2>
+
+<p><h2>What is a Polybase?</h2>
+Polybase allows the querying of both structures data (database tables with predefined schemas) and unstructured data (flat files in a HDFS).</p>
