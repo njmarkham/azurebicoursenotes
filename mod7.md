@@ -44,7 +44,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <li>Maximum of 2 billion tables per database</li>
 <li>Up to 1024 columns per table</li>
 <li>Number of rows limited only by available storage</li>
-<li>Maximum bytes per row is 8060./li>
+<li>Maximum bytes per row is 8060</li>
 <li>Identity and PK, FK and unique index constraints are not supported</li>
 <li>Case insesitive</li>
 <li>Physical table structures supported, heap, clustered/non-clustered index, clustered columnstore index and partitions</li>
@@ -89,5 +89,18 @@ Azure provides an interface to veiw database activity, queries, performance, set
 <li>Encryption</li>
 <li>Auditing</li>
 <li>Threat Detection</li>
+</ul>
+</p>
+
+<p>
+<b>Importing data into SQL DW</b><br/>
+<ul>
+<li>Bulk Copy Program (BCP) - used to import data from binary/text files directly into SQL DW, can also read out of a SQL DW (good for smaller datasets)</b></li>
+<li>AzCopy - Copy data from a local folder to blob storage, then using polybase an external table can be used to pick up the data from blob storage and write it into SQL DW (good for datasets under 10TB).</li>
+<li>Ship physical disks to Microsoft to load into Azure to be loaded into a virtual drive, a single import or export job can only handle up to 10 physical hard disks.</li>
+<li>Polybase/(Create Table As Select)CTAS - Polybase will natively query structured tables within a database, you can then add external tables provided a valid credential, external source and file format are specified. You can then create a table in Azure DW using CTAS from the external table.</li>
+<li>Import data using SSIS - ADO or OLE DB directly into the SQL DW table, or and Azure SQL DW Uplaod Task that uploads the files to Azure Blob storage then use polybase as mentioned above to insert into SQL DW.</li>
+<li>Azure Data Lake Store - This approach would be identical to the polybase method described above.</li>
+<li>Azure Stream Analytics - Simply create a target destination (output) in the Azure Stream Analytics that references the SQL DW table you require your data to be streamed to.</li>
 </ul>
 </p>

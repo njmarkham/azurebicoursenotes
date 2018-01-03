@@ -62,4 +62,4 @@ For small lookup tables, less than 100 million rows, often heap tables make sens
 </h2>
 
 <p><h2>What is a Polybase?</h2>
-Polybase allows the querying of both structures data (database tables with predefined schemas) and unstructured data (flat files in a HDFS).</p>
+Polybase allows the querying of both structured data (database tables with predefined schemas) and unstructured data (flat files in a HDFS).</p>
