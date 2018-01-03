@@ -28,13 +28,30 @@
 <p><h2>What is a Service Bus?</h2></p>
  
 
-<p><h2>What  are Vertices?</h2>
+<p><h2>What are Vertices?</h2>
 <br/>
 A vertex represents the resources used to perform a given task. Each vertex runs using an Analytics Unit (AU), each AU provides the processing power of two CPU cores and 6GB RAM. A vertex is also allotted a maximum of five hours run-time before it's forcible terminated to avoid runaway costs.
 </h2>
+
+<p><h2>SMP vs MMP</h2>
+SMP - Symmetric Multi-Processing. In a symmetrical multi-
+processing environment, the CPU's share the same memory, 
+and as a result code running in one CPU can affect the 
+memory used by another.<br/>
+MMP - Massively Parallel Processing. computer system with 
+many independent arithmetic units or entire 
+microprocessors, that run in parallel.
+</p>
 
 <p><h2>What is Round-Robin/Hash?</h2>
 Round Robin relates to distribution of data across multiple nodes of a database. Data is spread across multiple servers. Used where there a multiple primary/foreign keys and staging tables. <br/>
 Hash is where the value of a single column gets hashed to define the distribution number where the entire record will get inserted. Data is all in same place. Best for fact/detail tables if there is a common distribution key which is used in multi-distributed table joins.<br/>
 Neither of these are the same as a partition, replicated or temporary tables.
 </p>
+
+<p><h2>What is a heap table?</h2>
+<br/>
+When you are temporarily landing data on SQL Data Warehouse, you may find that using a heap table will make the overall process faster. This is because loads to heaps are faster than to index tables and in some cases the subsequent read can be done from cache. If you are loading data only to stage it before running more transformations, loading the table to heap table will be much faster than loading the data to a clustered columnstore table. In addition, loading data to a temporary table will also load much faster than loading a table to permanent storage.
+<br/><br/>
+For small lookup tables, less than 100 million rows, often heap tables make sense. Cluster columnstore tables begin to achieve optimal compression once there is more than 100 million rows.
+</h2>
