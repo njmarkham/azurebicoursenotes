@@ -28,5 +28,6 @@ Data Distribution
 <ul>
 <li>Round Robin relates to distribution of data across multiple nodes of a database. Data is spread across multiple servers. Used where there a multiple primary/foreign keys and staging tables. </li>
 <li>Hash is where the value of a single column gets hashed to define the distribution number where the entire record will get inserted. Data is all in same place. Best for fact/detail tables if there is a common distribution key which is used in multi-distributed table joins.</li>
-<li><i>Neither of these are the same as a partition, replicated or temporary tables.</i></li>
+</ul>
+<i>Neither of these are the same as a partition, replicated or temporary tables.</i>
 </p>
