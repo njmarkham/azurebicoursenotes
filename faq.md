@@ -22,12 +22,19 @@
 
 <h3><strong>FAQ</strong></h3>
 
-<h2>What is Azure Log Analytics?</h2>
+<p><h2>What is Azure Log Analytics?</h2></p>
  
 
-<h2>What is a Service Bus?</h2>
+<p><h2>What is a Service Bus?</h2></p>
  
 
-<h2>What  are Vertices?</h2>
+<p><h2>What  are Vertices?</h2>
 <br/>
 A vertex represents the resources used to perform a given task. Each vertex runs using an Analytics Unit (AU), each AU provides the processing power of two CPU cores and 6GB RAM. A vertex is also allotted a maximum of five hours run-time before it's forcible terminated to avoid runaway costs.
+</h2>
+
+<p><h2>What is Round-Robin/Hash?</h2>
+Round Robin relates to distribution of data across multiple nodes of a database. Data is spread across multiple servers. Used where there a multiple primary/foreign keys and staging tables. <br/>
+Hash is where the value of a single column gets hashed to define the distribution number where the entire record will get inserted. Data is all in same place. Best for fact/detail tables if there is a common distribution key which is used in multi-distributed table joins.<br/>
+Neither of these are the same as a partition, replicated or temporary tables.
+</p>
