@@ -52,30 +52,131 @@ The default size of a SQL Datawarehouse is 10GB.
 </p>
 
 <p>
-<b>Partitioning Tables</b>
-<ul>
-<li>Distrubuted tables are already segmeneteed by the defined distribution.</b></li>
-<li>Partitioning a table will for partition rows within a distribution.</li>
-<li>Optimises the loading of large tables</li>
-<li>Enables re-indexing of smaller partitions</li>
-<li>Enables piecemeal data reorganization</li>
-<li>Partitioned tables with clistered index can hinder data laod times more significantly on an MPP system than a SQL Server SMP system</li>
-<li>Page fragmentation can hinder query performance</li>
-<li>Partitioned table with a clustered columnstore index may improve range queries, these are column orientated stores (not row stores), benefits are lowest memory footprint in only a few columns of a table are used, also has best compression ratio.</li>
-<li>Not recommended to add a partion to table that has a non-clustered index, can increase random input/output and increase cost</li>
-<li>Partition for manageability of data, typically on a date key or interger surrogate and usually the same as a the clusterd index key</li>
-</ul>
-</p>
+<b>Concurrency Limits</b><br>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">DWU</th>
+<th style="text-align:center">Max concurrent queries</th>
+<th style="text-align:center">Concurrency slots allocated</th>
+<th style="text-align:center">Concurrency slots used by smallrc</th>
+<th style="text-align:center">Concurrency slots used by mediumrc</th>
+<th style="text-align:center">Concurrency slots used by largerc</th>
+<th style="text-align:center">Concurrency slots used by xlargerc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DW100</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left">DW200</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:left">DW300</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:left">DW400</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:left">DW500</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
 
-<p>
-<b>Statistics</b><br/>
-Statistics is an object in the database that contains information about the distributions of values in a column or multiple columns.
-<ul>
-<li>Not all stats are automatically created in Azure SQL DW.</b></li>
-<li>Compute node (Brawn - MPP Level) stats are updated with the table changes by 20%.</li>
-<li>Stats on Control nodes (Brain) are used to access cardinality, these are not updated automatically</li>
-<li>Multi-column stastics are information about joins on multiple key columns</li>
-</ul>
+</tr>
+<tr>
+<td style="text-align:left">DW600</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:left">DW1000</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:left">DW1200</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">48</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:left">DW1500</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:left">DW2000</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+</tr>
+<tr>
+<td style="text-align:left">DW3000</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">120</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+</tr>
+<tr>
+<td style="text-align:left">DW6000</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">240</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">128</td>
+</tr>
+</tbody>
+</table>
 </p>
 
 <p>
