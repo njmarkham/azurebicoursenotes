@@ -77,11 +77,234 @@ SQL DW will also act as a source for Azure ML (Machine Learning) and PowerBI.
 Statistics is an object in the database that contains information about the distributions of values in a column or multiple columns.
 <ul>
 <li>Not all stats are automatically created in Azure SQL DW.</b></li>
+<li>When creating statistics on a column the default sample size will be set to 20%.</b></li>
 <li>Compute node (Brawn - MPP Level) stats are updated with the table changes by 20%.</li>
 <li>Stats on Control nodes (Brain) are used to access cardinality, these are not updated automatically</li>
 <li>Multi-column stastics are information about joins on multiple key columns</li>
 </ul>
 </p>
+
+
+<p>
+<b>Concurrency Limits</b><br>
+Concurrent Queries: The way to control performance of a SQL DW is to allocation data warehouse units (DWU). A maximum of 32 concurrent queireis can be executed.<br/>
+Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each query requires a set of concurrency slots to run based on the four resource classes (rc) available, as shown in the table below.<br/>
+<span style="font-size: small;">
+
+<table style="font-size: 6px;">
+<thead>
+<tr>
+<th style="text-align:left" align="left"><sub>DWU</sub></th>
+<th style="text-align:center"><sub>Max concurrent queries</sub></th>
+<th style="text-align:center"><sub>Concurrency slots allocated</sub></th>
+<th style="text-align:center"><sub>smallrc slots / mem alloc</sub></th>
+<th style="text-align:center"><sub>mediumrc slots / mem alloc</sub></th>
+<th style="text-align:center"><sub>largerc slots / mem alloc</sub></th>
+<th style="text-align:center"><sub>xlargerc slots / mem alloc</sub></th>
+<th style="text-align:center"><sub>Compute Nodes</sub></th>
+<th style="text-align:center"><sub>Distributions per Node</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left" align="left"><sub>DW100</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>1</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW200</sub></td>
+<td style="text-align:center" align="center"><sub>8</sub></td>
+<td style="text-align:center" align="center"><sub>8</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>2</sub></td>
+<td style="text-align:center" align="center"><sub>30</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW300</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>3</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW400</sub></td>
+<td style="text-align:center" align="center"><sub>16</sub></td>
+<td style="text-align:center" align="center"><sub>16</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>15</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW500</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>5</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW600</sub></td>
+<td style="text-align:center" align="center"><sub>24</sub></td>
+<td style="text-align:center" align="center"><sub>24</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>6</sub></td>
+<td style="text-align:center" align="center"><sub>10</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW1000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>40</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>10</sub></td>
+<td style="text-align:center" align="center"><sub>6</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW1200</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>48</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>5</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW1500</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>15</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW2000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>80</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>3</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW3000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>120</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>30</sub></td>
+<td style="text-align:center" align="center"><sub>2</sub></td>
+</tr>
+<tr>
+<td style="text-align:left" align="left"><sub>DW6000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>240</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>128 / 12800</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
+<td style="text-align:center" align="center"><sub>1</sub></td>
+</tr>
+</tbody>
+</table>
+</sub>
+</span>
+</p>
+
+<p>
+The following queries adhere ot the concurrency limits:
+<ul>
+<li>SELECT</li>
+<li>INSERT-SELECT, UPDATE or DELETE</li>
+<li>ALTER INDEX REBUILD or REORGANIZE</li>
+<li>CREATE INDEX or ALTER TABLE REBUILD</li>
+<li>CREATE CLUSTERED COLUMNSTORE INDEXCREATE TABLE AS SELECT (CTAS)</li>
+<li>Data loads and data movement processes by the Data Movement Service (DMS)</li>
+</ul>
+<br/>
+The following queries <b><u>do not adhere</u></b> ot the concurrency limits:
+<ul>
+<li>CREATE or DROP or TRUNCATE</li>
+<li>IALTER TABLE or ALTER TABLE INDEX</li>
+<li>DROP INDEX</li>
+<li>CREATE, UPDATE or DROP STATISTICS</li>
+<li>CREATE LOGIN or ALTER AUTHORIZATION</li>
+<li>CREATE, ALTER or DROP USER</li>
+<li>CREATE, ALTER or DROP PROCEDURE</li>
+<li>CREATE or DROP VIEW</li>
+<li>SELECT from system views and Dynamic Management Views (DMVs)</li>
+<li>EXPLIAN and DBCC</li>
+</ul>
+<p>
+<b>Monitoring and Securing DW</b><br/>
+Azure provides an interface to veiw database activity, queries, performance, settings, drivers and connectiong strings. There is also a notifcation log to show the activities taking place and evidences how long certain activities takes at a database level. Azure takes care of backups, netowrk and disks. Data securuity is the responsibility of the user.
+<br/><br/>How Can Azure be Secured?
+<ul>
+<li>Connection</b></li>
+<li>Authentication</li>
+<li>Authorisation</li>
+<li>Encryption</li>
+<li>Auditing</li>
+<li>Threat Detection</li>
+</ul>
+</p>
+
+<p>
+<b>Scaling Compute Nodes</b><br/>
+The make up of SQL DW consists of 1 control node (brain) and many compute nodes (brawn), as shown in the table above.<br/>
+The number of actual distributions remains at 60, regardless of DWU size.<br/>
+The three main functions of compute nodes are Pause, Resume and Scale.
+</p>
+
+
+<p>
+<b>Best Practices</b><br/>
+<ul>
+<li>Labels can be assigned to a query before executing the query by adding the OPTION (LABEL = "My Project Name"), this will help categorise all activity when monitoring.</li>
+<li>Before you pause the SQL DW, ensure no queries are running else these will be terminated immediately.</li>
+<li>Always maintain up to date database statistics.</li>
+<li>Always use the most appropriat method to load data into SQL DW initially, BCP, ADF, or polybase if the dataset is very large.</li>
+<li>Specify hash distributions where appropriate, round-robin will always be the default.</li>
+<li>Do not overuse partitions, this will hinder performance.</li>
+<li>Use a higher resource class when queries require more memory.</li>
+<li>To increase concurrency, use the lower resource classes.</li>
+<li>Use DMV's to monitor and analyse user queries.</li>
+</p>
+
 
 <h4>Protecting data in SQL Data Warehouse</h4>
 <br/>
