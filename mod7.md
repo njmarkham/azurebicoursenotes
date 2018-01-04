@@ -56,6 +56,7 @@ The default size of a SQL Datawarehouse is 10GB.
 Concurrent Queries: The way to control performance of a SQL DW is to allocation data warehouse units (DWU). A maximum of 32 concurrent queireis can be executed.<br/>
 Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each query requires a set of concurrency slots to run based on the four resource classes (rc) available, as shown in the table below.<br/>
 <span style="font-size: small;">
+<sub>
 <table style="font-size: 6px;">
 <thead>
 <tr>
@@ -206,6 +207,7 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 </tr>
 </tbody>
 </table>
+</sub>
 </span>
 </p>
 
