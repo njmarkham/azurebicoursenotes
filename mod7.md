@@ -65,6 +65,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <th style="text-align:center">mediumrc slots / mem alloc</th>
 <th style="text-align:center">largerc slots / mem alloc</th>
 <th style="text-align:center">xlargerc slots / mem alloc</th>
+<th style="text-align:center">Compute Nodes</th>
+<th style="text-align:center">Distributions per Node</th>
 </tr>
 </thead>
 <tbody>
@@ -76,6 +78,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">1 / 100</td>
 <td style="text-align:center" align="center">2 / 200</td>
 <td style="text-align:center" align="center">4 / 400</td>
+<td style="text-align:center" align="center">1</td>
+<td style="text-align:center" align="center">60</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW200</td>
@@ -85,6 +89,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">2 / 200</td>
 <td style="text-align:center" align="center">4 / 400</td>
 <td style="text-align:center" align="center">8 / 800</td>
+<td style="text-align:center" align="center">2</td>
+<td style="text-align:center" align="center">30</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW300</td>
@@ -94,6 +100,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">2 / 200</td>
 <td style="text-align:center" align="center">4 / 400</td>
 <td style="text-align:center" align="center">8 / 800</td>
+<td style="text-align:center" align="center">3</td>
+<td style="text-align:center" align="center">20</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW400</td>
@@ -103,6 +111,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">4 / 400</td>
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
+<td style="text-align:center" align="center">4</td>
+<td style="text-align:center" align="center">15</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW500</td>
@@ -112,6 +122,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">4 / 400</td>
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
+<td style="text-align:center" align="center">5</td>
+<td style="text-align:center" align="center">12</td>
 
 </tr>
 <tr>
@@ -122,6 +134,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">4 / 400</td>
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
+<td style="text-align:center" align="center">6</td>
+<td style="text-align:center" align="center">10</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW1000</td>
@@ -131,6 +145,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
 <td style="text-align:center" align="center">32 / 3200</td>
+<td style="text-align:center" align="center">10</td>
+<td style="text-align:center" align="center">6</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW1200</td>
@@ -140,6 +156,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
 <td style="text-align:center" align="center">32 / 3200</td>
+<td style="text-align:center" align="center">12</td>
+<td style="text-align:center" align="center">5</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW1500</td>
@@ -149,6 +167,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">8 / 800</td>
 <td style="text-align:center" align="center">16 / 1600</td>
 <td style="text-align:center" align="center">32 / 3200</td>
+<td style="text-align:center" align="center">15</td>
+<td style="text-align:center" align="center">4</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW2000</td>
@@ -158,6 +178,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">16 / 1600</td>
 <td style="text-align:center" align="center">32 / 3200</td>
 <td style="text-align:center" align="center">64 / 6400</td>
+<td style="text-align:center" align="center">20</td>
+<td style="text-align:center" align="center">3</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW3000</td>
@@ -167,6 +189,8 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">16 / 1600</td>
 <td style="text-align:center" align="center">32 / 3200</td>
 <td style="text-align:center" align="center">64 / 6400</td>
+<td style="text-align:center" align="center">30</td>
+<td style="text-align:center" align="center">2</td>
 </tr>
 <tr>
 <td style="text-align:left" align="left">DW6000</td>
@@ -176,11 +200,37 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 <td style="text-align:center" align="center">32 / 3200</td>
 <td style="text-align:center" align="center">64 / 6400</td>
 <td style="text-align:center" align="center">128 / 12800</td>
+<td style="text-align:center" align="center">60</td>
+<td style="text-align:center" align="center">1</td>
 </tr>
 </tbody>
 </table>
 </p>
 
+<p>
+The following queries adhere ot the concurrency limits:
+<ul>
+<li>SELECT</li>
+<li>INSERT-SELECT, UPDATE or DELETE</li>
+<li>ALTER INDEX REBUILD or REORGANIZE</li>
+<li>CREATE INDEX or ALTER TABLE REBUILD</li>
+<li>CREATE CLUSTERED COLUMNSTORE INDEXCREATE TABLE AS SELECT (CTAS)</li>
+<li>Data loads and data movement processes by the Data Movement Service (DMS)</li>
+</ul>
+<br/>
+The following queries <b><u>do not adhere</u></b> ot the concurrency limits:
+<ul>
+<li>CREATE or DROP or TRUNCATE</li>
+<li>IALTER TABLE or ALTER TABLE INDEX</li>
+<li>DROP INDEX</li>
+<li>CREATE, UPDATE or DROP STATISTICS</li>
+<li>CREATE LOGIN or ALTER AUTHORIZATION</li>
+<li>CREATE, ALTER or DROP USER</li>
+<li>CREATE, ALTER or DROP PROCEDURE</li>
+<li>CREATE or DROP VIEW</li>
+<li>SELECT from system views and Dynamic Management Views (DMVs)</li>
+<li>EXPLIAN and DBCC</li>
+</ul>
 <p>
 <b>Monitoring and Securing DW</b><br/>
 Azure provides an interface to veiw database activity, queries, performance, settings, drivers and connectiong strings. There is also a notifcation log to show the activities taking place and evidences how long certain activities takes at a database level. Azure takes care of backups, netowrk and disks. Data securuity is the responsibility of the user.
