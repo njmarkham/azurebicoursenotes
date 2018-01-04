@@ -314,6 +314,7 @@ Azure Portal, REST API's and Powershell can be used to configure firewall rules 
 <ul>
 <li>Authentication via SQL Server authentication - Standard username and password combination hosted via SQL DW, it's good practice set the login up on the MASTER database, this ensure the user has login access to all databases within the server.</li>
 <li>Authentication via Microsoft Azure Active Directory (Azure AD) authentication - An Azure service you can use to manage users and groups across multiple Azure Services.</li>
+</ul>
 </p>
 
 <p>
