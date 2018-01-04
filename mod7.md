@@ -56,7 +56,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <table>
 <thead>
 <tr>
-<th style="text-align:left">DWU</th>
+<th style="text-align:left" align="left">DWU</th>
 <th style="text-align:center">Max concurrent queries</th>
 <th style="text-align:center">Concurrency slots allocated</th>
 <th style="text-align:center">Concurrency slots used by smallrc</th>
