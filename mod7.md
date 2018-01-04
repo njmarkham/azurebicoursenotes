@@ -67,7 +67,7 @@ The default size of a SQL Datawarehouse is 10GB.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">DW100</td>
+<td style="text-align:left" align="left">DW100</td>
 <td style="text-align:center" align="center">4</td>
 <td style="text-align:center" align="center">4</td>
 <td style="text-align:center" align="center">1</td>
@@ -76,7 +76,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:left" align="center">DW200</td>
+<td style="text-align:left" align="left">DW200</td>
 <td style="text-align:center" align="center">8</td>
 <td style="text-align:center" align="center">8</td>
 <td style="text-align:center" align="center">1</td>
@@ -85,7 +85,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">8</td>
 </tr>
 <tr>
-<td style="text-align:left">DW300</td>
+<td style="text-align:left" align="left">DW300</td>
 <td style="text-align:center" align="center">12</td>
 <td style="text-align:center" align="center">12</td>
 <td style="text-align:center" align="center">1</td>
@@ -94,7 +94,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">8</td>
 </tr>
 <tr>
-<td style="text-align:left">DW400</td>
+<td style="text-align:left" align="left">DW400</td>
 <td style="text-align:center" align="center">16</td>
 <td style="text-align:center" align="center">16</td>
 <td style="text-align:center" align="center">1</td>
@@ -103,7 +103,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">16</td>
 </tr>
 <tr>
-<td style="text-align:left">DW500</td>
+<td style="text-align:left" align="left">DW500</td>
 <td style="text-align:center" align="center">20</td>
 <td style="text-align:center" align="center">20</td>
 <td style="text-align:center" align="center">1</td>
@@ -113,7 +113,7 @@ The default size of a SQL Datawarehouse is 10GB.
 
 </tr>
 <tr>
-<td style="text-align:left">DW600</td>
+<td style="text-align:left" align="left">DW600</td>
 <td style="text-align:center" align="center">24</td>
 <td style="text-align:center" align="center">24</td>
 <td style="text-align:center" align="center">1</td>
@@ -122,7 +122,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">16</td>
 </tr>
 <tr>
-<td style="text-align:left">DW1000</td>
+<td style="text-align:left" align="left">DW1000</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">40</td>
 <td style="text-align:center" align="center">1</td>
@@ -131,7 +131,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">32</td>
 </tr>
 <tr>
-<td style="text-align:left">DW1200</td>
+<td style="text-align:left" align="left">DW1200</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">48</td>
 <td style="text-align:center" align="center">1</td>
@@ -140,7 +140,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">32</td>
 </tr>
 <tr>
-<td style="text-align:left">DW1500</td>
+<td style="text-align:left" align="left">DW1500</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">60</td>
 <td style="text-align:center" align="center">1</td>
@@ -149,7 +149,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">32</td>
 </tr>
 <tr>
-<td style="text-align:left">DW2000</td>
+<td style="text-align:left" align="left">DW2000</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">80</td>
 <td style="text-align:center" align="center">1</td>
@@ -158,7 +158,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">64</td>
 </tr>
 <tr>
-<td style="text-align:left">DW3000</td>
+<td style="text-align:left" align="left">DW3000</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">120</td>
 <td style="text-align:center" align="center">1</td>
@@ -167,7 +167,7 @@ The default size of a SQL Datawarehouse is 10GB.
 <td style="text-align:center" align="center">64</td>
 </tr>
 <tr>
-<td style="text-align:left">DW6000</td>
+<td style="text-align:left" align="left">DW6000</td>
 <td style="text-align:center" align="center">32</td>
 <td style="text-align:center" align="center">240</td>
 <td style="text-align:center" align="center">1</td>
