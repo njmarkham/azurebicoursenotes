@@ -38,7 +38,7 @@
 <li>Sequences</li>
 <li>Synonyms</li>
 <li>Identity Columns</li>
-<ul>
+</ul>
 Basic grouping is supported however grouping with ROLLUP, GROUPING SETS, or CUBE is not.
 </p>
 
@@ -57,8 +57,30 @@ SQL DW will also act as a source for Azure ML (Machine Learning) and PowerBI.
 <h4>Maintaining Performance</h4>
 <br/>
 <p>
+<b>Partitioning Tables</b>
+<ul>
+<li>Distrubuted tables are already segmeneteed by the defined distribution.</b></li>
+<li>Partitioning a table will for partition rows within a distribution.</li>
+<li>Optimises the loading of large tables</li>
+<li>Enables re-indexing of smaller partitions</li>
+<li>Enables piecemeal data reorganization</li>
+<li>Partitioned tables with clistered index can hinder data laod times more significantly on an MPP system than a SQL Server SMP system</li>
+<li>Page fragmentation can hinder query performance</li>
+<li>Partitioned table with a clustered columnstore index may improve range queries, these are column orientated stores (not row stores), benefits are lowest memory footprint in only a few columns of a table are used, also has best compression ratio.</li>
+<li>Not recommended to add a partion to table that has a non-clustered index, can increase random input/output and increase cost</li>
+<li>Partition for manageability of data, typically on a date key or interger surrogate and usually the same as a the clusterd index key</li>
+</ul>
+</p>
 
-
+<p>
+<b>Statistics</b><br/>
+Statistics is an object in the database that contains information about the distributions of values in a column or multiple columns.
+<ul>
+<li>Not all stats are automatically created in Azure SQL DW.</b></li>
+<li>Compute node (Brawn - MPP Level) stats are updated with the table changes by 20%.</li>
+<li>Stats on Control nodes (Brain) are used to access cardinality, these are not updated automatically</li>
+<li>Multi-column stastics are information about joins on multiple key columns</li>
+</ul>
 </p>
 
 <h4>Protecting data in SQL Data Warehouse</h4>
