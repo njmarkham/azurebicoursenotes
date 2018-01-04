@@ -73,137 +73,137 @@ Concurrency Slots: for every 100 DWU, four concurrency slots are allocated. each
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left" align="left">DW100</td>
-<td style="text-align:center" align="center">4</td>
-<td style="text-align:center" align="center">4</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">2 / 200</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">1</td>
-<td style="text-align:center" align="center">60</td>
+<td style="text-align:left" align="left"><sub>DW100</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>1</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW200</td>
-<td style="text-align:center" align="center">8</td>
-<td style="text-align:center" align="center">8</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">2 / 200</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">2</td>
-<td style="text-align:center" align="center">30</td>
+<td style="text-align:left" align="left"><sub>DW200</sub></td>
+<td style="text-align:center" align="center"><sub>8</sub></td>
+<td style="text-align:center" align="center"><sub>8</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>2</sub></td>
+<td style="text-align:center" align="center"><sub>30</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW300</td>
-<td style="text-align:center" align="center">12</td>
-<td style="text-align:center" align="center">12</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">2 / 200</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">3</td>
-<td style="text-align:center" align="center">20</td>
+<td style="text-align:left" align="left"><sub>DW300</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>2 / 200</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>3</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW400</td>
-<td style="text-align:center" align="center">16</td>
-<td style="text-align:center" align="center">16</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">4</td>
-<td style="text-align:center" align="center">15</td>
+<td style="text-align:left" align="left"><sub>DW400</sub></td>
+<td style="text-align:center" align="center"><sub>16</sub></td>
+<td style="text-align:center" align="center"><sub>16</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
+<td style="text-align:center" align="center"><sub>15</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW500</td>
-<td style="text-align:center" align="center">20</td>
-<td style="text-align:center" align="center">20</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">5</td>
-<td style="text-align:center" align="center">12</td>
+<td style="text-align:left" align="left"><sub>DW500</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>5</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
 
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW600</td>
-<td style="text-align:center" align="center">24</td>
-<td style="text-align:center" align="center">24</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">4 / 400</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">6</td>
-<td style="text-align:center" align="center">10</td>
+<td style="text-align:left" align="left"><sub>DW600</sub></td>
+<td style="text-align:center" align="center"><sub>24</sub></td>
+<td style="text-align:center" align="center"><sub>24</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>4 / 400</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>6</sub></td>
+<td style="text-align:center" align="center"><sub>10</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW1000</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">40</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">10</td>
-<td style="text-align:center" align="center">6</td>
+<td style="text-align:left" align="left"><sub>DW1000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>40</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>10</sub></td>
+<td style="text-align:center" align="center"><sub>6</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW1200</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">48</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">12</td>
-<td style="text-align:center" align="center">5</td>
+<td style="text-align:left" align="left"><sub>DW1200</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>48</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>12</sub></td>
+<td style="text-align:center" align="center"><sub>5</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW1500</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">60</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">8 / 800</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">15</td>
-<td style="text-align:center" align="center">4</td>
+<td style="text-align:left" align="left"><sub>DW1500</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>8 / 800</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>15</sub></td>
+<td style="text-align:center" align="center"><sub>4</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW2000</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">80</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">64 / 6400</td>
-<td style="text-align:center" align="center">20</td>
-<td style="text-align:center" align="center">3</td>
+<td style="text-align:left" align="left"><sub>DW2000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>80</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>20</sub></td>
+<td style="text-align:center" align="center"><sub>3</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW3000</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">120</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">16 / 1600</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">64 / 6400</td>
-<td style="text-align:center" align="center">30</td>
-<td style="text-align:center" align="center">2</td>
+<td style="text-align:left" align="left"><sub>DW3000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>120</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>16 / 1600</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>30</sub></td>
+<td style="text-align:center" align="center"><sub>2</sub></td>
 </tr>
 <tr>
-<td style="text-align:left" align="left">DW6000</td>
-<td style="text-align:center" align="center">32</td>
-<td style="text-align:center" align="center">240</td>
-<td style="text-align:center" align="center">1 / 100</td>
-<td style="text-align:center" align="center">32 / 3200</td>
-<td style="text-align:center" align="center">64 / 6400</td>
-<td style="text-align:center" align="center">128 / 12800</td>
-<td style="text-align:center" align="center">60</td>
-<td style="text-align:center" align="center">1</td>
+<td style="text-align:left" align="left"><sub>DW6000</sub></td>
+<td style="text-align:center" align="center"><sub>32</sub></td>
+<td style="text-align:center" align="center"><sub>240</sub></td>
+<td style="text-align:center" align="center"><sub>1 / 100</sub></td>
+<td style="text-align:center" align="center"><sub>32 / 3200</sub></td>
+<td style="text-align:center" align="center"><sub>64 / 6400</sub></td>
+<td style="text-align:center" align="center"><sub>128 / 12800</sub></td>
+<td style="text-align:center" align="center"><sub>60</sub></td>
+<td style="text-align:center" align="center"><sub>1</sub></td>
 </tr>
 </tbody>
 </table>
