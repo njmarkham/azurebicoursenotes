@@ -303,12 +303,27 @@ The three main functions of compute nodes are Pause, Resume and Scale.
 <li>Use a higher resource class when queries require more memory.</li>
 <li>To increase concurrency, use the lower resource classes.</li>
 <li>Use DMV's to monitor and analyse user queries.</li>
+</ul>
 </p>
 
 
 <h4>Protecting data in SQL Data Warehouse</h4>
 <br/>
 <p>
-
-
+Azure Portal, REST API's and Powershell can be used to configure firewall rules to the Azure SQL DW. All communication to SQL DW is encrypted, there are two ways in which a user can authenticate with SQL DW;
+<ul>
+<li>Authentication via SQL Server authentication - Standard username and password combination hosted via SQL DW, it's good practice set the login up on the MASTER database, this ensure the user has login access to all databases within the server.</li>
+<li>Authentication via Microsoft Azure Active Directory (Azure AD) authentication - An Azure service you can use to manage users and groups across multiple Azure Services.</li>
 </p>
+
+<p>
+<b>Authorising Users</b>
+Authorisation centers around what a user can do once they have been authenticated. Granular permissions can control what actions a user can perform, operations such as SELECT, INSERT, UPDATE and DELETE at column, toable or any object level. Authorisation can be given to an individual user or to a role.<br/>
+A user can be added to a role, which subsequently determines what actions a user can perform.<br/>
+A stored procedure is a good method to secure code, given a user to access to run a stored procedure, gives a user the results they may require, without revealing the code that make up the query delivering the result.
+</p>
+
+<p>
+SQL DW uses Transparent Data Encryption (TDE) for encrypting and decrypting data at rest. All data including backups and transaction logs are encrypted by default using the AES-256 encryption algorithm.
+</p>
+
