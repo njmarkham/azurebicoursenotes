@@ -318,7 +318,7 @@ Azure Portal, REST API's and Powershell can be used to configure firewall rules 
 </p>
 
 <p>
-<b>Authorising Users</b>
+<b>Authorising Users</b><br/>
 Authorisation centers around what a user can do once they have been authenticated. Granular permissions can control what actions a user can perform, operations such as SELECT, INSERT, UPDATE and DELETE at column, toable or any object level. Authorisation can be given to an individual user or to a role.<br/>
 A user can be added to a role, which subsequently determines what actions a user can perform.<br/>
 A stored procedure is a good method to secure code, given a user to access to run a stored procedure, gives a user the results they may require, without revealing the code that make up the query delivering the result.
